@@ -1,0 +1,26 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Replace this with the real Firebase Authentication UID for prikstheprashant@gmail.com.
+    // Leaving the empty value fails closed and denies all Firestore access.
+    function approvedUid() { return '__REPLACE_WITH_APPROVED_FIREBASE_UID__'; }
+    function isApproved() {
+      return request.auth != null
+        && request.auth.uid == approvedUid()
+        && request.auth.token.email == 'prikstheprashant@gmail.com'
+        && request.auth.token.email_verified == true;
+    }
+    function validDocument() {
+      return request.resource.data.keys().hasOnly([
+        'name', 'sku', 'category', 'variant', 'mrp', 'sellingPrice', 'manufacturingCost', 'gstRate', 'notes', 'costs',
+        'input', 'createdAt', 'updatedAt', 'offerType', 'eligibility', 'discount', 'bundlePrice', 'settings'
+      ]) && request.resource.data.size() < 100;
+    }
+    match /users/{uid}/{collectionName}/{document=**} {
+      allow read: if isApproved() && uid == request.auth.uid;
+      allow create, update: if isApproved() && uid == request.auth.uid && validDocument();
+      allow delete: if isApproved() && uid == request.auth.uid;
+    }
+    match /{document=**} { allow read, write: if false; }
+  }
+}

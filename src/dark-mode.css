@@ -1,0 +1,10 @@
+:root{color-scheme:light}
+[data-theme=dark]{color-scheme:dark;--surface:#111827;--raised:#090d16;--text:#f8fafc;--muted:#94a3b8;--border:#263244;--input:#111827;--hover:#1b2637;--accent:#818cf8;--green:#34d399;--red:#fb7185}
+[data-theme=dark] .hero{background:#172554;border-color:#312e81}
+[data-theme=dark] .notice{background:#1e1b4b;color:#c7d2fe}
+[data-theme=dark] .warning{background:#431407;color:#fed7aa}
+[data-theme=dark] .danger{background:#4c0519;color:#fecdd3}
+[data-theme=dark] .install-button{background:#1e1b4b;color:#c7d2fe;border-color:#818cf8}
+[data-theme=dark] .install-button:hover{background:#312e81}
+[data-theme=dark] .recharts-default-tooltip{background:var(--surface)!important;border-color:var(--border)!important}
+[data-theme=dark] .recharts-tooltip-label,[data-theme=dark] .recharts-tooltip-item{color:var(--text)!important}

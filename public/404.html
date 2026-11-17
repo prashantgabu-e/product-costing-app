@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Loading Fashion Profit Lab…</title>
+    <script>
+      // GitHub Pages serves this file for unknown paths. Preserve the requested
+      // route, then let the app restore it once its main page is loaded.
+      const route = window.location.pathname + window.location.search + window.location.hash
+      const repositoryBase = window.location.pathname.split('/').slice(0, 2).join('/') || '/'
+      window.location.replace(`${repositoryBase}/?route=${encodeURIComponent(route)}`)
+    </script>
+  </head>
+  <body></body>
+</html>

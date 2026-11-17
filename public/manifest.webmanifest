@@ -1,0 +1,14 @@
+{
+  "name": "Fashion Profit Lab",
+  "short_name": "Profit Lab",
+  "description": "Pricing and profitability intelligence for Dare & Rise.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#6366f1",
+  "icons": [
+    { "src": "app-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "app-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}
