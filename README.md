@@ -14,7 +14,7 @@ The app is intentionally unusable for sign-in until Firebase configuration is su
 
 ## Firestore security setup (required before deploy)
 
-1. Sign in once in Firebase Authentication using `prikstheprashant@gmail.com` and copy that user's **UID** from the Firebase Console.
+1. Sign in once in Firebase Authentication using gmail and copy that user's **UID** from the Firebase Console.
 2. Replace `__REPLACE_WITH_APPROVED_FIREBASE_UID__` in `firestore.rules` with the exact UID. Do not use an email as a UID and do not guess it.
 3. Deploy the rules using the Firebase CLI or paste them into the Firestore Rules editor and publish.
 

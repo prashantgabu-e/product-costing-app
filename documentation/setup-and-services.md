@@ -4,7 +4,6 @@
 
 - Node.js 20 or newer.
 - A Firebase project with Authentication and Cloud Firestore.
-- The approved Google account: `prikstheprashant@gmail.com`.
 
 ## Local configuration
 
