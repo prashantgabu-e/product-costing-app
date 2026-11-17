@@ -22,7 +22,7 @@ Until that UID is configured the rules fail closed and deny every Firestore requ
 
 ## GitHub Pages
 
-`vite.config.ts` builds the static site into `docs/`. Set `VITE_BASE_PATH=/repository-name/` for repository Pages, or `/` for a custom domain/root deployment.
+`vite.config.ts` builds the static site into `docs/`. Production builds default to `/product-costing-app/`, which is the GitHub Pages path for this repository. Set `VITE_BASE_PATH=/repository-name/` for a differently named repository, or `/` for a custom domain/root deployment.
 
 ```bash
 npm run build

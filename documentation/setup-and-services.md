@@ -39,7 +39,7 @@ users/{approvedUid}/settings/preferences
 
 ## GitHub Pages
 
-The Vite build output directory is `docs/`. For a project page, set `VITE_BASE_PATH=/repository-name/`; use `/` for a root-domain site. Deploy GitHub Pages from the `main` branch and `/docs` folder.
+The Vite build output directory is `docs/`. Production builds default to this repository’s GitHub Pages path: `/product-costing-app/`. Set `VITE_BASE_PATH=/repository-name/` when deploying under another repository name, or `/` for a root-domain site. Deploy GitHub Pages from the `main` branch and `/docs` folder.
 
 The application has URL routes such as `/product-library`. `public/404.html` restores requested routes when GitHub Pages returns its static 404 page for a direct route visit.
 
